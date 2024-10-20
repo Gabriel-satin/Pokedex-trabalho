@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4c21f; /* Fundo mais vivo inspirado no Pikachu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  position: relative; /* Necessário para a imagem de fundo */
+}
+
+/* Container da parte superior (formulário e título) */
+.header {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ff7905a9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px; /* Espaçamento entre a caixa e a lista de pokemons */
+  position: relative;
+  z-index: 1; /* Garantir que a caixa de cadastro fique sobre a imagem */
+}
+
+h1 {
+  font-size: 32px;
+  color: #ffcb05;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #3b4cca;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f8ff;
+  transition: transform 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ff6347;
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #d93a2f;
+  transform: scale(1.1);
+}
+
+/* Lista de pokemons cadastrados */
+.pokemon-list {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ff7905a9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #ffcb05;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Posição da imagem do Pikachu */
+body::before {
+  content: '';
+  background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'); /* Imagem do Pikachu */
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 0; /* A imagem ficará atrás do conteúdo */
+}
+/* Container do formulário do treinador */
+.trainer-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ff7905a9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.trainer-form h2 {
+  font-size: 28px;
+  color: #ffcb05;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.trainer-form select {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f8ff;
+  transition: transform 0.3s ease;
+}
+
+.trainer-form button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.trainer-form button:hover {
+  background-color: #388e3c;
+  transform: scale(1.1);
+}
