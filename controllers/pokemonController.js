@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 const pokemonModel = require("../models/pokemonModel");
 
 const getAllPokemon = (req, res) => {
   const pokemons = pokemonModel.getPokemon();
+=======
+const pokemonModel = require("../models/pokemonsModel");
+
+const getAllPokemon = (req, res) => {
+  const pokemons = pokemonModel.getPokemons();
+>>>>>>> 511711a8fb27a7dd55fd07ef4092c4eb0740912f
   res.render("index", { pokemons });
 };
 
@@ -14,6 +21,7 @@ const getPokemon = (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 const createNewPokemon = (req, res) => {
   const { name, type, power, description } = req.body;
   pokemonModel.createPokemon(name, type);
@@ -21,3 +29,6 @@ const createNewPokemon = (req, res) => {
 };
 
 module.exports = { getAllPokemon, getPokemon, createNewPokemon };
+=======
+module.exports = { getAllPokemon, getPokemons };
+>>>>>>> 511711a8fb27a7dd55fd07ef4092c4eb0740912f
