@@ -4,7 +4,7 @@ const pokemons = [
   { id: 3, nome: "Charmander", tipo: "Fogo" },
 ];
 
-<<<<<<< HEAD
+
 const getPokemon = () => pokemons;
 
 const getPokemonByid = (id) => pokemons.find(p => p.id === parseInt(id));
@@ -14,11 +14,11 @@ const createPokemon = (nome, tipo) => {
   pokemons.push({ id: newId, nome, tipo });
 };
 module.exports = { getPokemon, getPokemonByid, createPokemon };
-=======
+
 const getPokemons = () => pokemons;
 const getPokemonsByid = (id) => pokemons.find((p) => p.id === parseInt(id));
-const createPokemon = (nome, tipo) =>
+const createPokemons = (nome, tipo) =>
   pokemons.push(pokemons.lenght + 1, nome, tipo);
 
-mode = ule.exports = { getPokemons, getPokemonByid, createPokemon };
->>>>>>> 511711a8fb27a7dd55fd07ef4092c4eb0740912f
+module.exports = { getPokemons, getPokemonByid, createPokemon };
+

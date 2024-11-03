@@ -1,12 +1,18 @@
-const trainers = [];
+const {Sequelize, DataTypes, Sequelize} = require ('sequelize');
+const Sequelize = new Sequelize ('sqlite: :memory');
 
-const getAllTrainers = () => trainers;
-
-const getTrainerById = (id) => trainers.find(t => t.id === parseInt(id));
-
-const createTrainer = (name, pokemonList) => {
-  const newId = trainers.length + 1;
-  trainers.push({ id: newId, name, pokemonList });
-};
-
-module.exports = { getAllTrainers, getTrainerById, createTrainer };
+const User = sequelize.define(
+  'User',
+{
+  firstName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  lestName: {
+    type: DataTypes.STRING,
+  },
+},
+{
+  
+},
+);
